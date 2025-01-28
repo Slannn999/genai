@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Facts</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e5d8;
+        }
+
+        .fact-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #6f4e37;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="fact-container">
+        <h1>Random Coffee Fact</h1>
+        <p id="fact"></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const facts = [
+                "Coffee is the second most traded commodity on Earth after oil.",
+                "Coffee beans are not beans; they are fruit pits from the coffee cherry.",
+                "Espresso means 'pressed out' in Italian, referring to the way espresso is made by forcing boiling water through pressed coffee grounds.",
+                "Finland has the highest coffee consumption per capita in the world, with the average Finn consuming several cups a day.",
+                "The word 'coffee' comes from the Arabic for 'wine of the bean'.",
+                "The first webcam was created in Cambridge to check the status of a coffee pot.",
+                "Coffee was originally chewed, not sipped. Early East African tribes would grind the coffee cherries together, mixing the results into a paste with animal fat.",
+                "Decaffeinated coffee still contains caffeine, though it's usually about 97% less than regular coffee.",
+                "Brazil has been the largest producer of coffee for over 150 years.",
+                "It takes about 70 coffee beans to make one cup of coffee."
+            ];
+
+            const factElement = document.getElementById('fact');
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factElement.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
